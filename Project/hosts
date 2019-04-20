@@ -1,12 +1,12 @@
 [webservers]
-web1
-web2
+web1	ansible_host=192.168.57.106
+web2	ansible_host=192.168.57.107
 
 [dbservers]
 db1
 
 [lbservers]
-lb1
+lb1		ansible_host=localhost
 
 [monitoring]
 nagios
