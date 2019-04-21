@@ -2,9 +2,9 @@
 # This role installs httpd
 
 - name: Install http
-  yum:
+  apt:
     name: "{{ item }}"
-    state: present
+    update_cache: yes    
   with_items:
    - httpd
    - php

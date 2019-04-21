@@ -4,9 +4,12 @@ web2
 
 [dbservers]
 db1
+redis1
 
 [lbservers]
 lb1
 
 [monitoring]
-nagios
+nagios1
+
+
