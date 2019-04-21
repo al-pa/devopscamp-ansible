@@ -2,20 +2,23 @@
 # This role contains common plays that will run on all nodes.
 
 - name: Install python bindings for SE Linux
-  apt: name={{ item }} state=present update_cache=yes
-  with_items:
-   - libselinux-python
-   - libsemanage-python
+  apt:  
+    state: present 
+    update_cache: yes
+    name:
+      - python-selinux
+      - python-semanage
 
 - name: install some useful nagios plugins
-  apt: name={{ item }} state=present
-  with_items:
-   - nagios-nrpe
-   - nagios-plugins-swap
-   - nagios-plugins-users
-   - nagios-plugins-procs
-   - nagios-plugins-load
-   - nagios-plugins-disk
+  apt: 
+    state: present
+    name:
+      - nagios-nrpe
+      - nagios-plugins-swap
+      - nagios-plugins-users
+      - nagios-plugins-procs
+      - nagios-plugins-load
+      - nagios-plugins-disk
 
 - name: Install ntp
   apt: name=ntp state=present

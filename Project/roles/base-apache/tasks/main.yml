@@ -3,14 +3,13 @@
 
 - name: Install http
   apt:
-    name: "{{ item }}"
+    name:
+      - httpd
+      - php
+      - php-mysql
+      - git
     update_cache: yes
     state: present
-  with_items:
-   - httpd
-   - php
-   - php-mysql
-   - git
 
 - name: Configure SELinux to allow httpd to connect to remote database
   seboolean:
