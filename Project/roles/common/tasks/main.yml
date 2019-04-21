@@ -2,7 +2,7 @@
 # This role contains common plays that will run on all nodes.
 
 - name: Install python bindings for SE Linux
-  apt: name={{ item }} state=present
+  apt: name={{ item }} state=present update_cache=yes
   with_items:
    - libselinux-python
    - libsemanage-python
