@@ -3,7 +3,8 @@
 
 # Apply common configuration to all hosts
 - hosts: all
-  sudo: yes
+  become: yes
+  become_method: sudo
 
   roles:
   - common
