@@ -14,11 +14,12 @@
     state: present
     name:
       - nagios-nrpe-plugin
-      - nagios-plugins-swap
-      - nagios-plugins-users
-      - nagios-plugins-procs
-      - nagios-plugins-load
-      - nagios-plugins-disk
+      - nagios-plugins
+      # - nagios-plugins-swap
+      # - nagios-plugins-users
+      # - nagios-plugins-procs
+      # - nagios-plugins-load
+      # - nagios-plugins-disk
 
 - name: Install ntp
   apt: name=ntp state=present
