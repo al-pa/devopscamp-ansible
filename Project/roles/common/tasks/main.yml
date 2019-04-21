@@ -13,7 +13,7 @@
   apt: 
     state: present
     name:
-      - nagios-nrpe
+      - nagios-nrpe-plugin
       - nagios-plugins-swap
       - nagios-plugins-users
       - nagios-plugins-procs
